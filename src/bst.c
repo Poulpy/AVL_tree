@@ -103,3 +103,21 @@ bool contains_bst(struct bst *b, double to_find) {
     return false;
 }
 
+/*
+ * height
+ * Calculates the height of a bst
+ */
+unsigned int height(struct bst *b) {
+    unsigned int left_height, right_height;
+
+    if (b == NULL) return 0;
+
+    left_height = height(b->left);
+    right_height = height(b->right);
+
+    if (left_height > right_height) {
+        return left_height + 1;
+    } else {
+        return right_height + 1;
+    }
+}

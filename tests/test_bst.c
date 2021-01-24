@@ -44,9 +44,28 @@ void test_append_bst() {
     free_bst(b);
 }
 
+void test_height() {
+    struct bst *b;
+
+    b = new_bst(5.0);
+    if (height(b) == 1) {
+        puts("OK");
+    } else {
+        puts("KO");
+    }
+    append_bst(b, 3.0);
+    if (height(b) == 2) {
+        puts("OK");
+    } else {
+        puts("KO");
+    }
+    free_bst(b);
+}
+
 int main() {
     test_new_bst();
     test_append_bst();
+    test_height();
 
     return 0;
 }
