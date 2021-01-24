@@ -111,6 +111,7 @@ void test_new_doublev_and_fill() {
     struct doublev *v1;
 
     v1 = new_doublev_and_fill(3, 2.0, 3.0, 4.0);
+
     if (v1->v[0] == 2.0 && v1->v[1] == 3.0 && v1->v[2] == 4.0) {
         puts("OK");
     } else {
@@ -156,8 +157,8 @@ int main()
     test_new_doublev();
     test_concat_doublev();
     test_copy_doublev();
-    //test_eql_doublev();
-    //test_new_doublev_and_fill();
+    test_eql_doublev();
+    test_new_doublev_and_fill();
     //test_append_doublev();
     // test_clear_doublev();
 

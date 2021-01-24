@@ -26,13 +26,11 @@ struct doublev *new_doublev_and_fill(size_t len, ...) {
     struct doublev *dv;
     va_list ap;
 
-    dv = (struct doublev *) calloc(sizeof(struct doublev), 1);
-    dv->v = (double *) calloc(sizeof(double), len);
-    dv->len = len;
+    dv = new_doublev(len);
 
     // filling the array with the values ...
     va_start(ap, len);
-    for (size_t i = 0; i <= len; i++)  {
+    for (size_t i = 0; i != len; i++)  {
         dv->v[i] = va_arg(ap, double);
     }
     va_end(ap);
