@@ -155,7 +155,7 @@ int main()
 {
     test_new_doublev();
     test_concat_doublev();
-    //test_copy_doublev();
+    test_copy_doublev();
     //test_eql_doublev();
     //test_new_doublev_and_fill();
     //test_append_doublev();

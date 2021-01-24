@@ -72,9 +72,9 @@ void print_doublev(struct doublev *dv) {
     }
 
     for (size_t i = 0; i != dv->len - 1; i++) {
-        printf("%d, ", dv->v[i]);
+        printf("%f, ", dv->v[i]);
     }
-    printf("%d]\n", dv->v[dv->len - 1]);
+    printf("%f]\n", dv->v[dv->len - 1]);
 }
 
 /**
@@ -85,7 +85,7 @@ void print_doublev(struct doublev *dv) {
 void copy_doublev(struct doublev *to, struct doublev *from) {
     if (to->len != from->len) return;
 
-    memcpy(to->v, from->v, sizeof(from->v));
+    memcpy(to->v, from->v, sizeof(double *) * from->len);
 }
 
 /**
