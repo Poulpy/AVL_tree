@@ -114,7 +114,7 @@ void append_doublev(struct doublev *dv, double to_append) {
     size_t new_len;
 
     new_len = dv->len + 1;
-    dv->v = (void *) realloc(dv->v, sizeof(void) * new_len);
+    dv->v = (double *) realloc(dv->v, sizeof(double) * new_len);
     dv->len++;
     dv->v[new_len - 1] = to_append;
 }
