@@ -67,6 +67,11 @@ void print_offset(FILE* stream, int offset)
     }
 }
 
+/*
+ * print_bst
+ *
+ * Prints a bst in the console
+ */
 void print_bst(struct bst *root) {
     static int offset = 0;
 
@@ -85,6 +90,11 @@ void print_bst(struct bst *root) {
     offset -= 3;
 }
 
+/*
+ * contains_bst
+ *
+ * Check if a bst contains an element; returns a boolean
+ */
 bool contains_bst(struct bst *b, double to_find) {
     struct bst *current_node;
 
@@ -105,7 +115,9 @@ bool contains_bst(struct bst *b, double to_find) {
 
 /*
  * height
+ *
  * Calculates the height of a bst
+ * TODO correct this
  */
 unsigned int height(struct bst *b) {
     unsigned int left_height, right_height;
@@ -121,3 +133,48 @@ unsigned int height(struct bst *b) {
         return right_height + 1;
     }
 }
+
+// TODO remove ?
+// We add this, because the dependance is a bit out of place
+#ifdef DOUBLEV_H
+
+/*
+ * bst_to_doublev
+ *
+ * Convert a bst into a sorted array
+ *
+ * Note: don't forget to free
+ */
+struct doublev *bst_to_doublev(struct bst *b) {
+    struct doublev *dv;
+
+    if (b->left == NULL) return;
+
+    dv = new_doublev(0);
+    bst_to_doublev_aux(b, dv);
+
+    return dv;
+}
+
+/*
+ * bst_to_doublev_aux
+ *
+ * Iterate through a bst, and append the values met to an array
+ * The iteration is done so that the array is already sorted (forgot the name
+ * there's a name to this kind of iteration)
+ *
+ * Note: the array MUST be initialized
+ */
+void bst_to_doublev_aux(struct bst *b, struct doublev *dv) {
+    if (b->left != NULL) {
+        bst_to_doublev_aux(b->left, dv);
+    }
+
+    append_doublev(dv, b->key);
+
+    if (b->right != NULL) {
+        bst_to_doublev_aux(b->right, dv);
+    }
+}
+
+#endif
