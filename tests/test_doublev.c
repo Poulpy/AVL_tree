@@ -16,11 +16,11 @@ void test_concat_doublev() {
     v1 = new_doublev(1);
     v2 = new_doublev(1);
     v1->v[0] = 1.0;
-    v2->v[1] = 4.0;
+    v2->v[0] = 4.0;
 
     concat_doublev(v1, v2);
 
-    if (v1->len == 2 && v1->v[1] == 4.0 && v1->v[0] == 1.0) {
+    if (v1->len == 2 && v2->v[0] == 4.0 && v1->v[0] == 1.0) {
         puts("OK");
     } else {
         puts("KO");
