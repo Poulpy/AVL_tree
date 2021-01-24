@@ -29,6 +29,10 @@ void free_bst(struct bst *b) {
     free(b);
 }
 
+/*
+ * append_bst
+ * Append a new element (double) in the bst
+ */
 void append_bst(struct bst *b, double to_append) {
     struct bst *current_node, *previous_node;
     bool went_left;
@@ -54,31 +58,48 @@ void append_bst(struct bst *b, double to_append) {
     }
 }
 
-
-void print_bst_aux(struct bst *root, int space, int height) {
-    // Base case
-    if (root == NULL)
-        return;
-
-    // increase distance between levels
-    space += height;
-
-    // print right child first
-    print_bst_aux(root->right, space, 10);
-    puts("");
-
-    // print the current node after padding with spaces
-    for (int i = height; i < space; i++) {
-        printf(" ");
+void print_offset(FILE* stream, int offset)
+{
+    int i;
+    for (i = 0; i < offset; ++i)
+    {
+        fprintf(stream, " ");
     }
-    printf("%f", root->key);
-
-    // print left child
-    puts("");
-    print_bst_aux(root->left, space, 10);
 }
 
 void print_bst(struct bst *root) {
-    print_bst_aux(root, 10, 10);
+    static int offset = 0;
+
+    print_offset(stdout, offset);
+
+    if (root == NULL)
+    {
+        fprintf(stdout, "-\n");
+        return;
+    }
+    fprintf(stdout, "%.2f\n", root->key);
+
+    offset += 3;
+    print_bst(root->left);
+    print_bst(root->right);
+    offset -= 3;
 }
-//struct bst *new_bst_from_adjacency_list(struct doublevv **adjacency_list);
+
+bool contains_bst(struct bst *b, double to_find) {
+    struct bst *current_node;
+
+    current_node = b;
+
+    while (current_node != NULL) {
+        if (to_find == current_node->key) {
+            return true;
+        } else if (to_find < current_node->key) {
+            current_node = current_node->left;
+        } else {
+            current_node = current_node->right;
+        }
+    }
+
+    return false;
+}
+
