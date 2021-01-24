@@ -160,7 +160,7 @@ int main()
     test_eql_doublev();
     test_new_doublev_and_fill();
     test_append_doublev();
-    // test_clear_doublev();
+    test_clear_doublev();
 
     return 0;
 }
