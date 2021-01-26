@@ -125,7 +125,24 @@ void append_doublev(struct doublev *dv, double to_append) {
  * Remove all elements of a doublev
  */
 void clear_doublev(struct doublev *dv) {
-    dv->v = (void *) realloc(dv->v, sizeof(void) * 0);
+    dv->v = (double *) realloc(dv->v, sizeof(double) * 0);
     dv->len = 0;
 }
 
+/*
+ * slice_doublev
+ *
+ * Slice an array given 2 indexes. The first index marks the bottom of the array
+ * the second index marks the top. The upper index must be superior to the
+ * bottom index
+ *
+ * Note: don't forget to free_doublev
+ */
+struct doublev *slice_doublev(struct doublev *double_vector, size_t low_index, size_t high_index) {
+    struct doublev *slice;
+
+    if (high_index < low_index) return NULL;
+
+    slice = new_doublev(high_index - low_index + 1);
+    memcpy(slice->v, double_vector->v+low_index, sizeof(double) * slice->len);
+}
