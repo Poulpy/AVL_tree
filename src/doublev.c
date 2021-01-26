@@ -70,7 +70,7 @@ void print_doublev(struct doublev *dv) {
     }
 
     for (size_t i = 0; i != dv->len - 1; i++) {
-        printf("%f, ", dv->v[i]);
+        printf("%.2f, ", dv->v[i]);
     }
     printf("%f]\n", dv->v[dv->len - 1]);
 }
@@ -141,8 +141,10 @@ void clear_doublev(struct doublev *dv) {
 struct doublev *slice_doublev(struct doublev *double_vector, size_t low_index, size_t high_index) {
     struct doublev *slice;
 
-    if (high_index < low_index) return NULL;
+    if (high_index < low_index || high_index > double_vector->len) return NULL;
 
     slice = new_doublev(high_index - low_index + 1);
     memcpy(slice->v, double_vector->v+low_index, sizeof(double) * slice->len);
+
+    return slice;
 }

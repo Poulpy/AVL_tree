@@ -118,13 +118,23 @@ void test_slice_doublev() {
     struct doublev *dv, *slice;
 
     dv = new_doublev_and_fill(7, 2.0, 3.0, 4.0, 5.0, 5.0, 6.0, 8.0);
-    slice = slice_doublev(dv, 2, 5);
+    slice = slice_doublev(dv, 2, 1);
 
     assert(slice == NULL);
 
     slice = slice_doublev(dv, 2, 2);
 
-    assert(slice->len == 1 && slice->v[0] == 3.0);
+    assert(slice->len == 1 && slice->v[0] == 4.0);
+    free_doublev(slice);
+
+    slice = slice_doublev(dv, 2, 9);
+    assert(slice == NULL);
+
+    slice = slice_doublev(dv, 2, 5);
+    assert(slice->len == 4 && slice->v[1] == 5.0 && slice->v[2] == 5.0);
+
+    free_doublev(dv);
+    free_doublev(slice);
 }
 
 int main()
@@ -136,6 +146,7 @@ int main()
     test_new_doublev_and_fill();
     test_append_doublev();
     test_clear_doublev();
+    test_slice_doublev();
 
     return 0;
 }
