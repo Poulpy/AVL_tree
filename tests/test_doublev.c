@@ -1,4 +1,5 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <assert.h>
 #include "doublev.h"
 
 void test_new_doublev() {
@@ -7,7 +8,6 @@ void test_new_doublev() {
     v1 = new_doublev(0);
 
     free_doublev(v1);
-    puts("OK");
 }
 
 void test_concat_doublev() {
@@ -20,20 +20,12 @@ void test_concat_doublev() {
 
     concat_doublev(v1, v2);
 
-    if (v1->len == 2 && v2->v[0] == 4.0 && v1->v[0] == 1.0) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(v1->len == 2 && v2->v[0] == 4.0 && v1->v[0] == 1.0);
 
     v3 = new_doublev(0);
     concat_doublev(v3, v1);
 
-    if (eql_doublev(v3, v1)) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(eql_doublev(v3, v1));
 
     free_doublev(v1);
     free_doublev(v2);
@@ -52,11 +44,7 @@ void test_copy_doublev() {
 
     copy_doublev(v1, v2);
 
-    if (v1->v[0] == 0.0 && v1->v[1] == 4.0) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(v1->v[0] == 0.0 && v1->v[1] == 4.0);
 
     free_doublev(v1);
     free_doublev(v2);
@@ -75,30 +63,14 @@ void test_eql_doublev() {
     v2->v[0] = 0.0;
     v2->v[1] = 4.0;
 
-    if (!eql_doublev(v1, v2)) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(!eql_doublev(v1, v2));
 
     copy_doublev(v2, v1);
-    if (eql_doublev(v1, v2)) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(eql_doublev(v1, v2));
 
-    if (!eql_doublev(v3, v1)) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(!eql_doublev(v3, v1));
 
-    if (eql_doublev(v4, v5)) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(eql_doublev(v4, v5));
 
     free_doublev(v1);
     free_doublev(v2);
@@ -112,11 +84,7 @@ void test_new_doublev_and_fill() {
 
     v1 = new_doublev_and_fill(3, 2.0, 3.0, 4.0);
 
-    if (v1->v[0] == 2.0 && v1->v[1] == 3.0 && v1->v[2] == 4.0) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+    assert(v1->v[0] == 2.0 && v1->v[1] == 3.0 && v1->v[2] == 4.0);
 
     free_doublev(v1);
 }
@@ -126,11 +94,8 @@ void test_append_doublev() {
 
     vector = new_doublev_and_fill(4, 1.0, 1.0, 2.0, 3.0);
     append_doublev(vector, 2.0);
-    if (vector->len == 5 && vector->v[4] == 2.0) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+
+    assert(vector->len == 5 && vector->v[4] == 2.0);
 
     free_doublev(vector);
 }
@@ -142,14 +107,24 @@ void test_clear_doublev() {
 
     empty_vector = new_doublev(0);
     clear_doublev(vector);
-    if (eql_doublev(vector, empty_vector)) {
-        puts("OK");
-    } else {
-        puts("KO");
-    }
+
+    assert(eql_doublev(vector, empty_vector));
 
     free_doublev(vector);
     free_doublev(empty_vector);
+}
+
+void test_slice_doublev() {
+    struct doublev *dv, *slice;
+
+    dv = new_doublev_and_fill(7, 2.0, 3.0, 4.0, 5.0, 5.0, 6.0, 8.0);
+    slice = slice_doublev(dv, 2, 5);
+
+    assert(slice == NULL);
+
+    slice = slice_doublev(dv, 2, 2);
+
+    assert(slice->len == 1 && slice->v[0] == 3.0);
 }
 
 int main()
