@@ -58,6 +58,14 @@ void append_bst(struct bst *b, double to_append) {
     }
 }
 
+/*
+ * print_offset
+ *
+ * Prints space in a stream offset-times
+ *
+ * Example:
+ * print_offset(stdin, 5);
+ */
 void print_offset(FILE* stream, int offset)
 {
     int i;
@@ -117,12 +125,14 @@ bool contains_bst(struct bst *b, double to_find) {
  * height
  *
  * Calculates the height of a bst
- * TODO correct this
+ * Special cases (ref wikipedia):
+ * No nodes: -1
+ * 1 node: 0
  */
-unsigned int height(struct bst *b) {
-    unsigned int left_height, right_height;
+int height(struct bst *b) {
+    int left_height, right_height;
 
-    if (b == NULL) return 0;
+    if (b == NULL) return -1;
 
     left_height = height(b->left);
     right_height = height(b->right);
