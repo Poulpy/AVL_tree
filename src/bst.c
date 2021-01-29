@@ -144,9 +144,6 @@ int height(struct bst *b) {
     }
 }
 
-// TODO remove ?
-// We add this, because the dependance is a bit out of place
-#ifdef DOUBLEV_H
 
 /*
  * bst_to_doublev
@@ -158,7 +155,7 @@ int height(struct bst *b) {
 struct doublev *bst_to_doublev(struct bst *b) {
     struct doublev *dv;
 
-    if (b->left == NULL) return;
+    if (b == NULL) return new_doublev(0);
 
     dv = new_doublev(0);
     bst_to_doublev_aux(b, dv);
@@ -186,5 +183,3 @@ void bst_to_doublev_aux(struct bst *b, struct doublev *dv) {
         bst_to_doublev_aux(b->right, dv);
     }
 }
-
-#endif
