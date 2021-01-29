@@ -49,6 +49,8 @@ struct avl_tree *bst_to_avl_tree(struct bst *b) {
     // dv = create avl tree from array
     at = doublev_to_avl_tree(dv);
 
+    free_doublev(dv);
+
     return at;
 }
 
@@ -129,5 +131,24 @@ int height_avl_tree(struct avl_tree *root) {
         return left_height + 1;
     } else {
         return right_height + 1;
+    }
+}
+
+/*
+ * is_balanced
+ *
+ * Check if the BF (balance factor) of each node is in {0, -1, 1}
+ */
+bool is_balanced(struct avl_tree *root) {
+    int balance_factor;
+
+    if (NULL == root) return true;
+
+    balance_factor = height_avl_tree(root->left) - height_avl_tree(root->right);
+
+    if (balance_factor == 1 || balance_factor == 0 || balance_factor == -1) {
+        return is_balanced(root->left) || is_balanced(root->right);
+    } else {
+        return false;
     }
 }
