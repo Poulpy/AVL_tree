@@ -1,13 +1,17 @@
 #ifndef DOUBLEV_H
 #define DOUBLEV_H
 
-#include<stdbool.h>
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include <stdarg.h>
 
-// Vector of double
+/*
+ * doublev
+ *
+ * Vector of doubles
+ */
 struct doublev {
     double *v;
     size_t len;
