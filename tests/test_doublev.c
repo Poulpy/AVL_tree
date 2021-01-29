@@ -141,8 +141,6 @@ void test_random_doublev() {
     struct doublev *dv, *dv2;
     dv = random_doublev(10);
     dv2 = random_doublev(10);
-    print_doublev(dv);
-    print_doublev(dv2);
     free_doublev(dv);
     free_doublev(dv2);
 }
