@@ -137,6 +137,16 @@ void test_slice_doublev() {
     free_doublev(slice);
 }
 
+void test_random_doublev() {
+    struct doublev *dv, *dv2;
+    dv = random_doublev(10);
+    dv2 = random_doublev(10);
+    print_doublev(dv);
+    print_doublev(dv2);
+    free_doublev(dv);
+    free_doublev(dv2);
+}
+
 int main()
 {
     test_new_doublev();
@@ -147,6 +157,7 @@ int main()
     test_append_doublev();
     test_clear_doublev();
     test_slice_doublev();
+    test_random_doublev();
 
     return 0;
 }

@@ -152,3 +152,35 @@ struct doublev *slice_doublev(struct doublev *double_vector, size_t low_index, s
 
     return slice;
 }
+
+/*
+ * random_doublev
+ *
+ * Creates an array of 'random' doubles
+ * Note: don't forget to free_doublev
+ */
+struct doublev *random_doublev(size_t len) {
+    struct doublev *random_vector;
+
+    random_vector = new_doublev(len);
+
+    for (size_t i = 0; i != len; i++) {
+        random_vector->v[i] = random_double();
+    }
+
+    return random_vector;
+}
+
+#define __min 0
+#define __max 10000
+
+// TODO not really a random :/
+double random_double() {
+    double rst = (double) rand() / (RAND_MAX / (__max - __min));
+
+    if (rand() % 2) {
+        return -rst;
+    } else {
+        return rst;
+    }
+}

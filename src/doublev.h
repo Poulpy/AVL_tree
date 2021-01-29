@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
+#include <float.h>
 
 /*
  * doublev
@@ -27,5 +28,9 @@ void concat_doublev(struct doublev *double_vector, struct doublev *to_add);
 void copy_doublev(struct doublev *to, struct doublev *from);
 void free_doublev(struct doublev *double_vector);
 void print_doublev(struct doublev *double_vector);
+struct doublev *random_doublev(size_t len);
+
+
+double random_double();
 
 #endif
