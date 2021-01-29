@@ -2,6 +2,7 @@
 
 /*
  * new_bst
+ *
  * Creates a new bst with a given key
  *
  * Note: don't forget to free
@@ -19,6 +20,7 @@ struct bst *new_bst(double key) {
 
 /*
  * free_bst
+ *
  * Free the memory for a given bst
  */
 void free_bst(struct bst *b) {
@@ -31,11 +33,14 @@ void free_bst(struct bst *b) {
 
 /*
  * append_bst
+ *
  * Append a new element (double) in the bst
  */
 void append_bst(struct bst *b, double to_append) {
     struct bst *current_node, *previous_node;
     bool went_left;
+
+    if (NULL == b) return;
 
     current_node = b;
 
