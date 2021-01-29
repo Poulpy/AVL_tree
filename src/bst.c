@@ -71,8 +71,7 @@ void append_bst(struct bst *b, double to_append) {
  * Example:
  * print_offset(stdin, 5);
  */
-void print_offset(FILE* stream, int offset)
-{
+void print_offset(FILE* stream, int offset) {
     int i;
     for (i = 0; i < offset; ++i)
     {

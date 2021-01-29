@@ -55,6 +55,8 @@ bool eql_doublev(struct doublev *double_vector1, struct doublev *double_vector2)
  * Free the struct doublev
  */
 void free_doublev(struct doublev *dv) {
+    if (NULL == dv) return;
+
     free(dv->v);
     free(dv);
 }
@@ -63,6 +65,8 @@ void free_doublev(struct doublev *dv) {
  * Prints in the console the values of the array
  */
 void print_doublev(struct doublev *dv) {
+    if (NULL == dv) return;
+
     printf("[");
     if (dv->len == 0) {
         printf("]\n");
@@ -72,7 +76,7 @@ void print_doublev(struct doublev *dv) {
     for (size_t i = 0; i != dv->len - 1; i++) {
         printf("%.2f, ", dv->v[i]);
     }
-    printf("%f]\n", dv->v[dv->len - 1]);
+    printf("%.2f]\n", dv->v[dv->len - 1]);
 }
 
 /**

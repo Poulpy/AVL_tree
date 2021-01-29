@@ -71,36 +71,28 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
     } else {
         middle = dv->len / 2;
         bottom_part = slice_doublev(dv, 0, middle - 1);
-        upper_part = slice_doublev(dv, middle - 1, dv->len - 1);
+        upper_part = slice_doublev(dv, middle + 1, dv->len - 1);
+
+        printf("Middle is %d\n", middle);
+        //return NULL;
 
         root = new_avl_tree(dv->v[middle]);
-        root->left = doublev_to_avl_tree(bottom_part);
-        root->right = doublev_to_avl_tree(upper_part);
+        if (NULL != bottom_part) {
+            puts("Bottom part");
+            print_doublev(bottom_part);
+            root->left = doublev_to_avl_tree(bottom_part);
+            free_doublev(bottom_part);
+        }
+        if (NULL != upper_part) {
+            puts("Upper part");
+            print_doublev(upper_part);
+            root->right = doublev_to_avl_tree(upper_part);
+            free_doublev(upper_part);
+        }
 
-        free_doublev(bottom_part);
-        free_doublev(upper_part);
     }
 
     return root;
-}
-
-
-
-/*
- * print_offset
- *
- * Prints space in a stream offset-times
- *
- * Example:
- * print_offset(stdin, 5);
- */
-void print_offset(FILE* stream, int offset)
-{
-    int i;
-    for (i = 0; i < offset; ++i)
-    {
-        fprintf(stream, " ");
-    }
 }
 
 /*

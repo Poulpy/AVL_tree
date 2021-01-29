@@ -23,6 +23,8 @@ void append_bst(struct bst *b, double to_append);
 void bst_to_doublev_aux(struct bst *b, struct doublev *dv);
 void free_bst(struct bst *b);
 void print_bst(struct bst *b);
+
+void print_offset(FILE* stream, int offset);
 // struct bst *new_bst_from_adjacency_list(struct doublevv **adjacency_list);
 
 #endif

@@ -14,6 +14,9 @@ void test_doublev_to_avl_tree() {
 
     values = new_doublev_and_fill(5, 3.0, 4.0, 5.9, 6.0, 7.0);
     root = doublev_to_avl_tree(values);
+    print_avl_tree(root);
+    free_avl_tree(root);
+    free_doublev(values);
 }
 
 void test_bst_to_avl_tree() {
