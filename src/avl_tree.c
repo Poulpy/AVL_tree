@@ -57,7 +57,7 @@ struct avl_tree *bst_to_avl_tree(struct bst *b) {
  *
  * Converts a sorted array to an AVL tree
  * Assumption: the array given is sorted
- * TODO: check array is sorted
+ * TODO: check array is sorted, or sort the array ?
  *
  * Note: don't forget to free_avl_tree
  */
@@ -66,6 +66,8 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
     struct avl_tree *root;
     size_t middle;
 
+    if (dv == NULL) return NULL;
+
     if (dv->len == 1) {
         root = new_avl_tree(dv->v[0]);
     } else {
@@ -73,23 +75,12 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
         bottom_part = slice_doublev(dv, 0, middle - 1);
         upper_part = slice_doublev(dv, middle + 1, dv->len - 1);
 
-        printf("Middle is %d\n", middle);
-        //return NULL;
-
         root = new_avl_tree(dv->v[middle]);
-        if (NULL != bottom_part) {
-            puts("Bottom part");
-            print_doublev(bottom_part);
-            root->left = doublev_to_avl_tree(bottom_part);
-            free_doublev(bottom_part);
-        }
-        if (NULL != upper_part) {
-            puts("Upper part");
-            print_doublev(upper_part);
-            root->right = doublev_to_avl_tree(upper_part);
-            free_doublev(upper_part);
-        }
+        root->left = doublev_to_avl_tree(bottom_part);
+        root->right = doublev_to_avl_tree(upper_part);
 
+        free_doublev(bottom_part);
+        free_doublev(upper_part);
     }
 
     return root;
@@ -116,4 +107,27 @@ void print_avl_tree(struct avl_tree *root) {
     print_avl_tree(root->left);
     print_avl_tree(root->right);
     offset -= 3;
+}
+
+/*
+ * height_avl_tree
+ *
+ * Calculates the height of an avl_tree
+ * Special cases (ref wikipedia):
+ * No nodes: -1
+ * 1 node: 0
+ */
+int height_avl_tree(struct avl_tree *root) {
+    int left_height, right_height;
+
+    if (root == NULL) return -1;
+
+    left_height = height_avl_tree(root->left);
+    right_height = height_avl_tree(root->right);
+
+    if (left_height > right_height) {
+        return left_height + 1;
+    } else {
+        return right_height + 1;
+    }
 }
