@@ -9,4 +9,6 @@ struct iia {
     struct avl_tree *a;
 };
 
+void print_iia(struct iia triplet);
+
 #endif
