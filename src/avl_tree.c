@@ -87,6 +87,22 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
 
     return root;
 }
+// TODO
+struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
+    struct avl_tree *at;
+    int diff;
+    struct doublev *dv;
+
+    // get values as a sorted array
+    dv = bst_to_doublev(b);
+    // dv = create avl tree from array
+    // TODO
+
+    free_doublev(dv);
+
+    return at;
+}
+
 
 /*
  * print_avl_tree
