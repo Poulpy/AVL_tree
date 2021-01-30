@@ -10,7 +10,7 @@ struct stack {
 
 struct stack *new_stack(struct iia triplet);
 void push_stack(struct stack *s, struct iia triplet);
-struct iia pop(struct stack *s);
+struct iia pop_stack(struct stack *s);
 void free_stack(struct stack *s);
 void print_stack(struct stack *s);
 

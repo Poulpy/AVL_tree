@@ -17,7 +17,7 @@ void push_stack(struct stack *s, struct iia triplet) {
     s->len++;
 }
 
-struct iia pop(struct stack *s) {
+struct iia pop_stack(struct stack *s) {
     struct iia triplet;
 
     triplet = s->triplets[s->len - 1];
