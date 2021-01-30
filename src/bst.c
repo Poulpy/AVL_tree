@@ -187,3 +187,21 @@ void bst_to_doublev_aux(struct bst *b, struct doublev *dv) {
         bst_to_doublev_aux(b->right, dv);
     }
 }
+
+/*
+ * random_bst
+ *
+ * Return a random BST, given a number of nodes
+ * Note: don't forget to free_bst
+ */
+struct bst *random_bst(size_t nodes) {
+    struct bst *b;
+
+    b = new_bst(random_double());
+
+    for (size_t i = 1; i != nodes; i++) {
+        append_bst(b, random_double());
+    }
+
+    return b;
+}

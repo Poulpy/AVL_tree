@@ -23,6 +23,7 @@ struct bst {
 bool contains_bst(struct bst *b, double to_find);
 int height(struct bst *b);
 struct bst *new_bst(double key);
+struct bst *random_bst(size_t nodes);
 struct doublev *bst_to_doublev(struct bst *b);
 void append_bst(struct bst *b, double to_append);
 void bst_to_doublev_aux(struct bst *b, struct doublev *dv);
