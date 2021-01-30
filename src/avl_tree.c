@@ -98,7 +98,7 @@ struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
 
     // get values as a sorted array
     dv = bst_to_doublev(b);
-    root = NULL;
+    root = new_avl_tree(0.0);
     s = new_stack((struct iia) { 0, dv->len, root });
 
     while (!is_empty_stack(s)) {
@@ -113,13 +113,13 @@ struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
             m = (h - l + 1) / 2;
             a = new_avl_tree(dv->v[m]);
 
-            if (m - 1 < l) {
-                a->left = new_avl_tree(0.0);
-                push_stack(s, (struct iia) {l, m - 1, a->left});
-            }
             if (h < m + 1) {
                 a->right = new_avl_tree(0.0);
                 push_stack(s, (struct iia) {m + 1, h, a->right});
+            }
+            if (m - 1 < l) {
+                a->left = new_avl_tree(0.0);
+                push_stack(s, (struct iia) {l, m - 1, a->left});
             }
         }
     }
