@@ -87,20 +87,47 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
 
     return root;
 }
+
 // TODO
 struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
-    struct avl_tree *at;
-    int diff;
+    struct avl_tree *a, *root;
     struct doublev *dv;
+    struct stack *s;
+    struct iia triplet;
+    size_t l, h, m;
 
     // get values as a sorted array
     dv = bst_to_doublev(b);
-    // dv = create avl tree from array
-    // TODO
+    root = NULL;
+    s = new_stack((struct iia) { 0, dv->len, root });
 
+    while (!is_empty_stack(s)) {
+        triplet = pop_stack(s);
+        l = triplet.i;
+        h = triplet.j;
+        a = triplet.a;
+
+        if (h - l == 0) {
+            a->key = dv->v[h];
+        } else {
+            m = (h - l + 1) / 2;
+            a = new_avl_tree(dv->v[m]);
+
+            if (m - 1 < l) {
+                a->left = new_avl_tree(0.0);
+                push_stack(s, (struct iia) {l, m - 1, a->left});
+            }
+            if (h < m + 1) {
+                a->right = new_avl_tree(0.0);
+                push_stack(s, (struct iia) {m + 1, h, a->right});
+            }
+        }
+    }
+
+    free_stack(s);
     free_doublev(dv);
 
-    return at;
+    return root;
 }
 
 
@@ -166,5 +193,21 @@ bool is_balanced(struct avl_tree *root) {
         return is_balanced(root->left) || is_balanced(root->right);
     } else {
         return false;
+    }
+}
+
+/**
+ * eql_avl_tree
+ *
+ * Checks if 2 given AVL trées are equal
+ */
+bool eql_avl_tree(struct avl_tree *a1, struct avl_tree *a2) {
+    if (NULL == a1 && NULL != a2 || NULL != a1 && NULL == a2) {
+        return false;
+    } else if (NULL == a1 && NULL == a2) {
+        return true;
+    } else {
+        return a1->key == a2->key && eql_avl_tree(a1->left, a2->left)
+               && eql_avl_tree(a1->right, a2->right);
     }
 }

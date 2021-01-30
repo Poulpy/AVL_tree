@@ -45,9 +45,26 @@ void test_bst_to_avl_tree() {
     append_bst(b, 6.5);
     root = bst_to_avl_tree(b);
 
-    assert(is_balanced(root));
+    assert(is_balanced(root) && height_avl_tree(root) <= 2 && height_avl_tree(root) > 0);
 
     free_avl_tree(root);
+    free_bst(b);
+}
+
+void test_bst_to_avl_tree_it() {
+    struct bst *b;
+    struct avl_tree *a, *a2;
+
+    b = random_bst(20);
+    print_bst(b);
+    a = bst_to_avl_tree_it(b);
+    a2 = bst_to_avl_tree(b);
+
+    print_avl_tree(a);
+    assert(is_balanced(a) && eql_avl_tree(a, a2));
+
+    free_avl_tree(a);
+    free_avl_tree(a2);
     free_bst(b);
 }
 
@@ -55,6 +72,7 @@ int main() {
     test_new_avl_tree();
     test_doublev_to_avl_tree();
     test_bst_to_avl_tree();
+    test_bst_to_avl_tree_it();
 
     return 0;
 }

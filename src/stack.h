@@ -13,5 +13,6 @@ void push_stack(struct stack *s, struct iia triplet);
 struct iia pop_stack(struct stack *s);
 void free_stack(struct stack *s);
 void print_stack(struct stack *s);
+bool is_empty_stack(struct stack *s);
 
 #endif

@@ -15,3 +15,9 @@ To run the tests :
 ./bin/test_bst
 ./bin/test_avl_tree
 ```
+
+# Want to contribute ?
+
+```
+find * -name *.[ch] -type f | xargs grep -n TODO
+```

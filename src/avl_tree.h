@@ -6,6 +6,8 @@
 
 #include "doublev.h"
 #include "bst.h"
+#include "iia.h"
+#include "stack.h"
 
 /*
  * AVL tree
@@ -23,9 +25,11 @@ struct avl_tree {
     double key;
 };
 
+bool eql_avl_tree(struct avl_tree *a1, struct avl_tree *a2);
 bool is_balanced(struct avl_tree *root);
 int height_avl_tree(struct avl_tree *root);
 struct avl_tree *bst_to_avl_tree(struct bst *b);
+struct avl_tree *bst_to_avl_tree_it(struct bst *b);
 struct avl_tree *doublev_to_avl_tree(struct doublev *dv);
 struct avl_tree *new_avl_tree(double key);
 void free_avl_tree(struct avl_tree *root);
