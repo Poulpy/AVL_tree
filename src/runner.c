@@ -42,12 +42,11 @@ int main() {
 
         records[j] = (float) (end - start) / CLOCKS_PER_SEC;
         sizes[j] = TYPESIZE * i;
-        printf("%f\n", records[j]);
 
         free_bst(rnd_bst);
         free_avl_tree(rnd_avl_tree);
     }
-    dump_run(records, sizes, MEM_ITERATIONS, "data/bsttoavltr_rec.dat");
+    dump_run(records, sizes, MEM_ITERATIONS, "data/bsttoavlt_rec.dat");
 
     return 0;
 }
