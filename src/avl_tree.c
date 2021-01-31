@@ -135,12 +135,12 @@ struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
 
             printf("l %d m %d h %d\n", l, m, h);
 
-            if (h > m + 1) {
+            if (h >= m + 1) {
                 //puts("h < m + 1");
                 a->right = new_avl_tree(0.0);
                 push_stack(s, (struct iia) {m + 1, h, a->right});
             }
-            if (m - 1 > l) {
+            if (m - 1 >= l) {
                 //puts("m - 1 < l");
                 a->left = new_avl_tree(0.0);
                 push_stack(s, (struct iia) {l, m - 1, a->left});
