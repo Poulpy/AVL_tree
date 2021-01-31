@@ -1,5 +1,15 @@
 #include "stack.h"
 
+struct stack *new_empty_stack() {
+    struct stack *s;
+
+    s = malloc(sizeof(struct stack));
+    s->len = 0;
+    s->triplets = malloc(sizeof(struct iia));
+
+    return s;
+}
+
 /*
  * new_stack
  *

@@ -98,10 +98,29 @@ struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
 
     // get values as a sorted array
     dv = bst_to_doublev(b);
+
+    /*
+    m = dv->len / 2;
+    s = new_empty_stack();
+    l = 0;
+    h = dv->len - 1;
+    root = new_avl_tree(dv->v[m]);
+
+    if (h < m + 1) {
+        root->right = new_avl_tree(0.0);
+        push_stack(s, (struct iia) {m + 1, h, root->right});
+    }
+    if (m - 1 < l) {
+        root->left = new_avl_tree(0.0);
+        push_stack(s, (struct iia) {l, m - 1, root->left});
+    }
+    */
+
     root = new_avl_tree(0.0);
-    s = new_stack((struct iia) { 0, dv->len, root });
+    s = new_stack((struct iia) { 0, dv->len - 1, root });
 
     while (!is_empty_stack(s)) {
+        //puts("OOK");
         triplet = pop_stack(s);
         l = triplet.i;
         h = triplet.j;
@@ -110,18 +129,26 @@ struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
         if (h - l == 0) {
             a->key = dv->v[h];
         } else {
-            m = (h - l + 1) / 2;
-            a = new_avl_tree(dv->v[m]);
+            m = ((h - l + 1) / 2) + l;
+            //a = new_avl_tree(dv->v[m]);
+            a->key = dv->v[m];
 
-            if (h < m + 1) {
+            printf("l %d m %d h %d\n", l, m, h);
+
+            if (h > m + 1) {
+                //puts("h < m + 1");
                 a->right = new_avl_tree(0.0);
                 push_stack(s, (struct iia) {m + 1, h, a->right});
             }
-            if (m - 1 < l) {
+            if (m - 1 > l) {
+                //puts("m - 1 < l");
                 a->left = new_avl_tree(0.0);
                 push_stack(s, (struct iia) {l, m - 1, a->left});
             }
         }
+        //if (s == NULL) puts("NULL");
+        //printf("len %d\n", s->len);
+        //print_stack(s);
     }
 
     free_stack(s);

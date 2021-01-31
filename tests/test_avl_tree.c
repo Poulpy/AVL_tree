@@ -55,11 +55,20 @@ void test_bst_to_avl_tree_it() {
     struct bst *b;
     struct avl_tree *a, *a2;
 
-    b = random_bst(20);
-    print_bst(b);
+    //b = random_bst(20);
+    b = new_bst(4.0);
+    append_bst(b, 5.0);
+    append_bst(b, 6.0);
+    append_bst(b, 7.0);
+    append_bst(b, 6.5);
+
+
+    //print_bst(b);
     a = bst_to_avl_tree_it(b);
     a2 = bst_to_avl_tree(b);
 
+    print_avl_tree(a2);
+    puts("----");
     print_avl_tree(a);
     assert(is_balanced(a) && eql_avl_tree(a, a2));
 
