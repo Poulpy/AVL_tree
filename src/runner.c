@@ -5,7 +5,7 @@
 
 #define MEM_BEGIN 10000
 #define MEM_END 50000
-#define MEM_STEP 1000
+#define MEM_STEP 100
 #define MEM_ITERATIONS (MEM_END / MEM_STEP)
 #define REPETITIONS 100
 #define TYPESIZE 64

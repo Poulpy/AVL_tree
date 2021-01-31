@@ -21,3 +21,7 @@ To run the tests :
 ```
 find * -name *.[ch] -type f | xargs grep -n TODO
 ```
+
+# Notes
+
+` gnuplot -c create_plots_bw.gp > plots.png` 
