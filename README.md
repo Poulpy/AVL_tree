@@ -26,4 +26,4 @@ find * -name *.[ch] -type f | xargs grep -n TODO
 
 # Notes
 
-` gnuplot -c create_plots_bw.gp > plots.png` 
+` gnuplot -c create_plots_bw.gp > data/plots/plots.png`

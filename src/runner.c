@@ -66,8 +66,8 @@ void run_test(const char *filename) {
 }
 
 int main() {
-    run_test("data/bsttoavlt_rec.dat");
-    run_test_it("data/bsttoavlt_ite.dat");
+    run_test("data/csv/bsttoavlt_rec.dat");
+    run_test_it("data/csv/bsttoavlt_ite.dat");
 
     return 0;
 }
