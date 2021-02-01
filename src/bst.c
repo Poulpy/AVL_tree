@@ -18,6 +18,33 @@ struct bst *new_bst(double key) {
     return b;
 }
 
+struct bst *new_empty_bst() {
+    struct bst *b;
+
+    b = (struct bst *) calloc(sizeof(struct bst), 1);
+    b->left = NULL;
+    b->right = NULL;
+
+    return b;
+}
+
+
+struct bst *new_bst_and_fill(size_t nodes_count, ...) {
+    struct bst *root;
+    va_list ap;
+
+    root = new_empty_bst();
+
+    // filling the array with the values ...
+    va_start(ap, nodes_count);
+    for (size_t i = 0; i != nodes_count; i++)  {
+        append_bst(root, va_arg(ap, double));
+    }
+    va_end(ap);
+
+    return root;
+}
+
 /*
  * free_bst
  *
