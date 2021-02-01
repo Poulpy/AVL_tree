@@ -87,29 +87,19 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
  * Note: don't forget to free_avl_tree
  */
 struct avl_tree *doublev_to_avl_tree_aux(struct doublev *dv, size_t l, size_t h) {
-    //struct doublev *bottom_part, *upper_part;
     struct avl_tree *root;
     size_t middle;
 
     if (h < l) return NULL;
-    printf("l %d h %d \n", l, h);
 
     if (h == l) {
         root = new_avl_tree(dv->v[h]);
     } else {
         middle = (h - l + 1) / 2 + l;
-        printf("m %d\n", middle);
-        //bottom_part = slice_doublev(dv, 0, middle - 1);
-        //upper_part = slice_doublev(dv, middle + 1, dv->len - 1);
 
         root = new_avl_tree(dv->v[middle]);
         root->left = doublev_to_avl_tree_aux(dv, l, middle - 1);
         root->right = doublev_to_avl_tree_aux(dv, middle + 1, h);
-        puts("=========");
-        print_avl_tree(root);
-
-        //free_doublev(bottom_part);
-        //free_doublev(upper_part);
     }
 
     return root;
