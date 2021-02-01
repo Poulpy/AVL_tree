@@ -2,6 +2,8 @@
  Implementation in C of binary search tree + avl tree.
  An AVL tree is a self-balancing binary search tree, named after inventors Adelson-Velsky and Landis (Wikipedia).
 
+!(Plots)[plots.png]
+
 # Tests
 
 To compile the tests, run
