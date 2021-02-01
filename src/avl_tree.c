@@ -58,7 +58,6 @@ void free_avl_tree(struct avl_tree *root) {
  */
 struct avl_tree *bst_to_avl_tree(struct bst *b) {
     struct avl_tree *at;
-    int diff;
     struct doublev *dv;
 
     // get values as a sorted array
