@@ -8,14 +8,24 @@
 
 To compile the tests, run
 ```
-make
+make tests
 ```
 
 To run the tests :
 ```
 ./bin/test_doublev
 ./bin/test_bst
+./bin/test_stack
 ./bin/test_avl_tree
+```
+
+# Run benchmark and draw plots
+
+```
+# make sure your os is quiesced for better results
+make benchmark
+# plot is under data/plots
+# csv files are under data/csv
 ```
 
 # Want to contribute ?
