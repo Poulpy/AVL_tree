@@ -71,6 +71,12 @@ struct avl_tree *bst_to_avl_tree(struct bst *b) {
     return at;
 }
 
+struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
+    if (NULL == dv) return NULL;
+
+    return doublev_to_avl_tree_aux(dv, 0, dv->len - 1);
+}
+
 /*
  * doublev_to_avl_tree
  *
@@ -80,26 +86,30 @@ struct avl_tree *bst_to_avl_tree(struct bst *b) {
  *
  * Note: don't forget to free_avl_tree
  */
-struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
-    struct doublev *bottom_part, *upper_part;
+struct avl_tree *doublev_to_avl_tree_aux(struct doublev *dv, size_t l, size_t h) {
+    //struct doublev *bottom_part, *upper_part;
     struct avl_tree *root;
     size_t middle;
 
-    if (dv == NULL) return NULL;
+    if (h < l) return NULL;
+    printf("l %d h %d \n", l, h);
 
-    if (dv->len == 1) {
-        root = new_avl_tree(dv->v[0]);
+    if (h == l) {
+        root = new_avl_tree(dv->v[h]);
     } else {
-        middle = dv->len / 2;
-        bottom_part = slice_doublev(dv, 0, middle - 1);
-        upper_part = slice_doublev(dv, middle + 1, dv->len - 1);
+        middle = (h - l + 1) / 2 + l;
+        printf("m %d\n", middle);
+        //bottom_part = slice_doublev(dv, 0, middle - 1);
+        //upper_part = slice_doublev(dv, middle + 1, dv->len - 1);
 
         root = new_avl_tree(dv->v[middle]);
-        root->left = doublev_to_avl_tree(bottom_part);
-        root->right = doublev_to_avl_tree(upper_part);
+        root->left = doublev_to_avl_tree_aux(dv, l, middle - 1);
+        root->right = doublev_to_avl_tree_aux(dv, middle + 1, h);
+        puts("=========");
+        print_avl_tree(root);
 
-        free_doublev(bottom_part);
-        free_doublev(upper_part);
+        //free_doublev(bottom_part);
+        //free_doublev(upper_part);
     }
 
     return root;
@@ -138,11 +148,11 @@ struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
             a->key = dv->v[m];
 
             if (h >= m + 1) {
-                a->right = new_avl_tree(0.0);
+                a->right = new_empty_avl_tree();
                 push_stack(s, (struct iia) {m + 1, h, a->right});
             }
             if (m - 1 >= l) {
-                a->left = new_avl_tree(0.0);
+                a->left = new_empty_avl_tree();
                 push_stack(s, (struct iia) {l, m - 1, a->left});
             }
         }
