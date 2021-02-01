@@ -18,6 +18,12 @@ struct bst *new_bst(double key) {
     return b;
 }
 
+/*
+ * new_empty_bst
+ *
+ * Creates an empty node
+ * Note: defer free_bst
+ */
 struct bst *new_empty_bst() {
     struct bst *b;
 
@@ -28,7 +34,12 @@ struct bst *new_empty_bst() {
     return b;
 }
 
-
+/*
+ * new_bst_and_fill
+ *
+ * Creates a new bst with the values given as params
+ * Note: defer free_bst
+ */
 struct bst *new_bst_and_fill(size_t nodes_count, ...) {
     struct bst *root;
     va_list ap;
