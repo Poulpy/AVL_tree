@@ -1,6 +1,23 @@
 #include "avl_tree.h"
 
 /*
+ * new_empty_avl_tree
+ *
+ * Creates a new AVL tree with no value for the root node
+ * Note: don't forget to free_avl_tree
+ */
+struct avl_tree *new_empty_avl_tree() {
+    struct avl_tree *root;
+
+    root = (struct avl_tree *) calloc(sizeof(struct avl_tree), 1);
+    root->left = NULL;
+    root->right = NULL;
+
+    return root;
+}
+
+
+/*
  * new_avl_tree
  *
  * Creates a new AVL tree with a given key for the first node
@@ -88,7 +105,13 @@ struct avl_tree *doublev_to_avl_tree(struct doublev *dv) {
     return root;
 }
 
-// TODO
+/*
+ * bst_to_avl_tree_it
+ *
+ * Create an AVL tree from a BST (iterative version using stack)
+ *
+ * Note: don't forget to free
+ */
 struct avl_tree *bst_to_avl_tree_it(struct bst *b) {
     struct avl_tree *a, *root;
     struct doublev *dv;

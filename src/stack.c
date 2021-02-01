@@ -1,5 +1,11 @@
 #include "stack.h"
 
+/*
+ * new_empty_stack
+ *
+ * Creates a new empty stack
+ * Note: don't forget to free_stack
+ */
 struct stack *new_empty_stack() {
     struct stack *s;
 
