@@ -5,9 +5,7 @@ INC=-Isrc
 
 .PHONY: tests benchmark
 
-all:
-	tests
-	benchmark
+all: tests benchmark
 
 tests:
 	mkdir -p $(BIN_DIR)

@@ -50,7 +50,7 @@ void test_bst_to_doublev() {
     append_bst(b, 290.4);
     append_bst(b, 290.04);
     dv = bst_to_doublev(b);
-    dv2 = new_doublev_and_fill(6, 2.0, 2.0, 3.0, 5.0, 290.4, 290.04);
+    dv2 = new_doublev_and_fill(5, 2.0, 3.0, 5.0, 290.4, 290.04);
     assert(eql_doublev(dv, dv2));
 
     dv3 = bst_to_doublev(NULL);

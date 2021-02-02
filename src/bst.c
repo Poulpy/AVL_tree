@@ -72,7 +72,7 @@ void free_bst(struct bst *b) {
 /*
  * append_bst
  *
- * Append a new element (double) in the bst
+ * Append a new element (double) in the bst if it isn't ALREADY here
  */
 void append_bst(struct bst *b, double to_append) {
     struct bst *current_node, *previous_node;
@@ -85,7 +85,10 @@ void append_bst(struct bst *b, double to_append) {
     while (current_node != NULL) {
         previous_node = current_node;
 
-        if (to_append <= current_node->key) {
+        // don't add if the tree contains already the element
+        if (to_append == current_node->key) {
+            return;
+        } else if (to_append < current_node->key) {
             current_node = current_node->left;
             went_left = true;
         } else {
