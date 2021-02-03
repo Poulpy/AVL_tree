@@ -3,9 +3,9 @@ FLAGS=-W -O2 -g -std=c99
 CC=gcc
 INC=-Isrc
 
-.PHONY: tests benchmark plots
+.PHONY: tests benchmark plots check
 
-all: tests benchmark plots
+all: tests benchmark
 
 tests:
 	mkdir -p $(BIN_DIR)
@@ -19,6 +19,12 @@ benchmark:
 
 plots:
 	gnuplot -c create_plots_bw.gp > data/plots/plots_$(date +%Y_%m_%d_%H_%M_%S).png
+
+check: tests
+	./$(BIN_DIR)/test_doublev
+	./$(BIN_DIR)/test_stack
+	./$(BIN_DIR)/test_bst
+	./$(BIN_DIR)/test_avl_tree
 
 clean:
 	rm $(BIN_DIR)/*
