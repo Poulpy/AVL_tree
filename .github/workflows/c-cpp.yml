@@ -12,9 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install gnuplot
-      run: sudo apt-get install gnuplot
     - name: make
       run: make
     - name: make check
@@ -24,6 +21,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+      - name: Install gnuplot
+        run: sudo apt-get install gnuplot
+      - name: make
+        run: make
       - name: make benchmark
         run: make benchmark
       - name: make plots
