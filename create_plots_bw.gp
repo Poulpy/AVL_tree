@@ -14,7 +14,7 @@ set datafile separator ','
 set xlabel "Memory (B)"
 set ylabel "Time (s)"
 
-plot "data/bsttoavlt_rec.dat" using 1:2 with lines t "Recursive version", "data/bsttoavlt_ite.dat" using 1:2 with lines t "Iterative version"
+plot "data/csv/bsttoavlt_rec.dat" using 1:2 with lines t "Recursive version", "data/csv/bsttoavlt_ite.dat" using 1:2 with lines t "Iterative version"
 
 # set title "Intel(R) Pentium(R) bandwidth (in GiB/s) for a Load benchmark on a single array"
 #unset multiplot
