@@ -21,6 +21,9 @@ jobs:
       run: make check
 
   benchmark_plot:
+    runs-on: ubuntu-latest
+
+    steps:
     - name: make benchmark
       run: make benchmark
     - name: make plots
