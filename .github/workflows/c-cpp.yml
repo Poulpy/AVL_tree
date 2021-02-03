@@ -25,11 +25,7 @@ jobs:
     - name: make plots
       run: make plots
     - name: upload benchmark plot
-    uses: actions/upload-release-asset@v1
-    env:
-      GITHUB_TOKEN: ${{ github.token }}
-    with:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
-      asset_path: ./bin/plots/plots.png
-      asset_name: plots.png
-      asset_content_type: image/png
+      uses: actions/upload-artifact@v2
+      with:
+        name: benchmark_plot.png
+        path: data/plots/plots.png
