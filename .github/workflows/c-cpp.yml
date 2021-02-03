@@ -20,12 +20,16 @@ jobs:
     - name: make check
       run: make check
 
-    - name: make benchmark
-      run: make benchmark
-    - name: make plots
-      run: make plots
-    - name: upload benchmark plot
-      uses: actions/upload-artifact@v2
-      with:
-        name: benchmark_plot.png
-        path: data/plots/plots.png
+  benchmark_plot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: make benchmark
+        run: make benchmark
+      - name: make plots
+        run: make plots
+      - name: upload benchmark plot
+        uses: actions/upload-artifact@v2
+        with:
+          name: benchmark_plot.png
+          path: data/plots/plots.png
