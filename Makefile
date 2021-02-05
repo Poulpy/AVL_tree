@@ -8,7 +8,6 @@ INC=-Isrc
 
 all: tests benchmark
 
-
 build/doublev.o: src/doublev.c
 	$(CC) $(FLAGS) $(INC) -c $^ -o $@
 
@@ -20,19 +19,6 @@ build/bst.o: build/doublev.o src/bst.c
 
 bin/test_bst: build/bst.o build/doublev.o tests/test_bst.c
 	$(CC) $(FLAGS) $(INC) $^ -o $@
-
-
-build/avl_tree.o: src/avl_tree.c build/bst.o build/stack.o build/doublev.o
-	$(CC) $(FLAGS) $(INC) -c $^ -o $@
-
-build/iia.o: src/iia.c build/avl_tree.o
-	$(CC) $(FLAGS) $(INC) -c $^ -o $@
-
-build/stack.o: build/iia.o
-	$(CC) $(FLAGS) $(INC) -c $^ src/stack.c -o $@
-bin/test_stack: build/stack.o
-	$(CC) $(FLAGS) $(INC) $^ tests/test_stack.c -o $@
-
 
 tests:
 	mkdir -p $(BIN_DIR)
