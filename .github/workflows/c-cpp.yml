@@ -29,8 +29,10 @@ jobs:
         run: make
       - name: make benchmark
         run: make benchmark
-      - name: make plots
-        run: make plots
+      - name: make run_fat_benchmark
+        run: make run_fat_benchmark
+      - name: make dummy_plots
+        run: make dummy_plots
       - name: upload benchmark plot
         uses: actions/upload-artifact@v2
         with:

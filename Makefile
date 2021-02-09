@@ -4,7 +4,7 @@ FLAGS=-W -O2 -g -std=c99
 CC=gcc
 INC=-Isrc
 
-.PHONY: tests benchmark plots check
+.PHONY: tests benchmark plots check run_fat_benchmark run_local_benchmark plots dummy_plots
 
 all: tests benchmark
 
@@ -31,14 +31,17 @@ benchmark:
 	$(CC) $(FLAGS) $(INC) src/doublev.c src/bst.c src/iia.c src/stack.c src/avl_tree.c src/runner.c -o $(BIN_DIR)/runner
 
 run_fat_benchmark:
-	./bin/runner 1000 50000 100
+	./bin/runner 1000 70000 100
 
 run_local_benchmark:
 	sudo cpupower -c 3 frequency-set --governor performance
-	taskset -c 3 ./bin/runner 10000 50000 1000
+	taskset -c 3 ./bin/runner 1000 50000 100
 
 plots:
 	gnuplot -c create_plots_bw.gp > data/plots/plots_$(shell date +%d_%H_%M_%S).png
+
+dummy_plots:
+	gnuplot -c create_plots_bw.gp > data/plots/plots.png
 
 check: tests
 	./$(BIN_DIR)/test_doublev
