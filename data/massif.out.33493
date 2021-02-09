@@ -1,0 +1,1701 @@
+desc: (none)
+cmd: ./bin/runner 1000 50000 1000
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=21721587
+mem_heap_B=452512
+mem_heap_extra_B=256072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 452512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 98280 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 98280 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 24552 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n1: 12264 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n1: 12264 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 24552 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n1: 12264 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n1: 12264 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 24552 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n1: 12264 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n1: 12264 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 24552 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n1: 12264 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n1: 12264 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 12264 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 96312 0x109934: new_bst (bst.c:13)
+  n1: 96312 0x109934: append_bst (bst.c:103)
+   n1: 96312 0x109D0A: random_bst (bst.c:244)
+    n1: 96312 0x10A747: run_test (runner.c:73)
+     n0: 96312 0x1092B5: main (runner.c:105)
+ n1: 95664 0x1098F4: new_bst (bst.c:13)
+  n1: 95664 0x1098F4: append_bst (bst.c:101)
+   n1: 95664 0x109D0A: random_bst (bst.c:244)
+    n1: 95664 0x10A747: run_test (runner.c:73)
+     n0: 95664 0x1092B5: main (runner.c:105)
+ n1: 93720 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 93720 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 93720 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 24576 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 12288 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+      n1: 12288 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+     n2: 24576 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 12288 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+      n1: 12288 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+    n2: 44568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n2: 24576 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 12288 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+      n1: 12288 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+     n2: 19992 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 12288 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 12288 in 2 places, all below massif's threshold (1.00%)
+      n1: 7704 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 7704 in 2 places, all below massif's threshold (1.00%)
+ n1: 64000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 64000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 64000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 64000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 64000 0x10A75A: run_test (runner.c:76)
+      n0: 64000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=40926848
+mem_heap_B=312368
+mem_heap_extra_B=205288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=67608348
+mem_heap_B=72536
+mem_heap_extra_B=45400
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=98261951
+mem_heap_B=58376
+mem_heap_extra_B=35960
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=122874571
+mem_heap_B=118160
+mem_heap_extra_B=75816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=139145878
+mem_heap_B=313352
+mem_heap_extra_B=205944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=162045369
+mem_heap_B=179192
+mem_heap_extra_B=116504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=195853418
+mem_heap_B=178832
+mem_heap_extra_B=116264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=218642955
+mem_heap_B=552008
+mem_heap_extra_B=365048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=253460754
+mem_heap_B=571544
+mem_heap_extra_B=378072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=271498048
+mem_heap_B=564296
+mem_heap_extra_B=373240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=290224964
+mem_heap_B=532952
+mem_heap_extra_B=352344
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=313133345
+mem_heap_B=722624
+mem_heap_extra_B=478792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=336036043
+mem_heap_B=937392
+mem_heap_extra_B=512056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=368816881
+mem_heap_B=277328
+mem_heap_extra_B=181928
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=394659065
+mem_heap_B=476768
+mem_heap_extra_B=314888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=425050405
+mem_heap_B=917432
+mem_heap_extra_B=576064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=458560758
+mem_heap_B=32144
+mem_heap_extra_B=18472
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=487200213
+mem_heap_B=246896
+mem_heap_extra_B=161640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=505888525
+mem_heap_B=2188512
+mem_heap_extra_B=1248072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 2188512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 542784 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 542784 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 346176 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 149568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n1: 51264 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 51264 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 469008 0x109934: new_bst (bst.c:13)
+  n1: 469008 0x109934: append_bst (bst.c:103)
+   n1: 469008 0x109D0A: random_bst (bst.c:244)
+    n1: 469008 0x10A747: run_test (runner.c:73)
+     n0: 469008 0x1092B5: main (runner.c:105)
+ n1: 466968 0x1098F4: new_bst (bst.c:13)
+  n1: 466968 0x1098F4: append_bst (bst.c:101)
+   n1: 466968 0x109D0A: random_bst (bst.c:244)
+    n1: 466968 0x10A747: run_test (runner.c:73)
+     n0: 466968 0x1092B5: main (runner.c:105)
+ n1: 393216 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 149592 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 51288 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n0: 2136 in 1 place, below massif's threshold (1.00%)
+     n2: 47016 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 47016 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 47016 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n2: 196608 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+ n1: 312000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 312000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 312000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 312000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 312000 0x10A75A: run_test (runner.c:76)
+      n0: 312000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=532060164
+mem_heap_B=2244512
+mem_heap_extra_B=1280072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 2244512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 566784 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 566784 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 370176 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 173568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n2: 75264 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 26136 in 2 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 480768 0x109934: new_bst (bst.c:13)
+  n1: 480768 0x109934: append_bst (bst.c:103)
+   n1: 480768 0x109D0A: random_bst (bst.c:244)
+    n1: 480768 0x10A747: run_test (runner.c:73)
+     n0: 480768 0x1092B5: main (runner.c:105)
+ n1: 479208 0x1098F4: new_bst (bst.c:13)
+  n1: 479208 0x1098F4: append_bst (bst.c:101)
+   n1: 479208 0x109D0A: random_bst (bst.c:244)
+    n1: 479208 0x10A747: run_test (runner.c:73)
+     n0: 479208 0x1092B5: main (runner.c:105)
+ n1: 393216 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 173592 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 75288 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n0: 26136 in 1 place, below massif's threshold (1.00%)
+     n0: 23016 in 1 place, below massif's threshold (1.00%)
+    n2: 196608 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+ n1: 320000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 320000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 320000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 320000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 320000 0x10A75A: run_test (runner.c:76)
+      n0: 320000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=565334258
+mem_heap_B=179120
+mem_heap_extra_B=116456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=578031928
+mem_heap_B=901112
+mem_heap_extra_B=597784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=605939373
+mem_heap_B=865712
+mem_heap_extra_B=574184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=622522183
+mem_heap_B=172592
+mem_heap_extra_B=112104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=651402372
+mem_heap_B=165152
+mem_heap_extra_B=107144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=674832034
+mem_heap_B=2524512
+mem_heap_extra_B=1440072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 2524512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 686784 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 686784 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 393192 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 293568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 195264 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 96960 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 47808 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 47808 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 541416 0x109934: new_bst (bst.c:13)
+  n1: 541416 0x109934: append_bst (bst.c:103)
+   n1: 541416 0x109D0A: random_bst (bst.c:244)
+    n1: 541416 0x10A747: run_test (runner.c:73)
+     n0: 541416 0x1092B5: main (runner.c:105)
+ n1: 538560 0x1098F4: new_bst (bst.c:13)
+  n1: 538560 0x1098F4: append_bst (bst.c:101)
+   n1: 538560 0x109D0A: random_bst (bst.c:244)
+    n1: 538560 0x10A747: run_test (runner.c:73)
+     n0: 538560 0x1092B5: main (runner.c:105)
+ n1: 393216 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 293592 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 96984 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n2: 96984 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 47832 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 47832 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n2: 99624 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n0: 1320 in 1 place, below massif's threshold (1.00%)
+ n1: 360000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 360000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 360000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 360000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 360000 0x10A75A: run_test (runner.c:76)
+      n0: 360000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=693878374
+mem_heap_B=871520
+mem_heap_extra_B=578056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=712165486
+mem_heap_B=154280
+mem_heap_extra_B=99896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=737047017
+mem_heap_B=2636512
+mem_heap_extra_B=1504072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 2636512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 734784 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 734784 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 393192 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 341568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 144960 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 95808 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 46656 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 46656 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n0: 49128 in 3 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 564360 0x1098F4: new_bst (bst.c:13)
+  n1: 564360 0x1098F4: append_bst (bst.c:101)
+   n1: 564360 0x109D0A: random_bst (bst.c:244)
+    n1: 564360 0x10A747: run_test (runner.c:73)
+     n0: 564360 0x1092B5: main (runner.c:105)
+ n1: 563616 0x109934: new_bst (bst.c:13)
+  n1: 563616 0x109934: append_bst (bst.c:103)
+   n1: 563616 0x109D0A: random_bst (bst.c:244)
+    n1: 563616 0x10A747: run_test (runner.c:73)
+     n0: 563616 0x1092B5: main (runner.c:105)
+ n1: 393216 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 341592 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 144984 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 46680 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 46680 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 46680 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+    n2: 51624 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n2: 51624 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n0: 2472 in 1 place, below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 376000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 376000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 376000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 376000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 376000 0x10A75A: run_test (runner.c:76)
+      n0: 376000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=768806584
+mem_heap_B=2692512
+mem_heap_extra_B=1536072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 2692512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 758784 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 758784 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 393192 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 365568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 168960 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n2: 70656 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 46080 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 46080 in 3 places, all below massif's threshold (1.00%)
+      n0: 24576 in 2 places, all below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 576648 0x1098F4: new_bst (bst.c:13)
+  n1: 576648 0x1098F4: append_bst (bst.c:101)
+   n1: 576648 0x109D0A: random_bst (bst.c:244)
+    n1: 576648 0x10A747: run_test (runner.c:73)
+     n0: 576648 0x1092B5: main (runner.c:105)
+ n1: 575328 0x109934: new_bst (bst.c:13)
+  n1: 575328 0x109934: append_bst (bst.c:103)
+   n1: 575328 0x109D0A: random_bst (bst.c:244)
+    n1: 575328 0x10A747: run_test (runner.c:73)
+     n0: 575328 0x1092B5: main (runner.c:105)
+ n1: 393216 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 365592 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 168984 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 70680 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n0: 21528 in 1 place, below massif's threshold (1.00%)
+    n0: 27624 in 1 place, below massif's threshold (1.00%)
+ n1: 384000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 384000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 384000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 384000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 384000 0x10A75A: run_test (runner.c:76)
+      n0: 384000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=801661969
+mem_heap_B=2748512
+mem_heap_extra_B=1568072
+mem_stacks_B=0
+heap_tree=detailed
+n6: 2748512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 782784 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 782784 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 393192 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 389568 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 192960 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 94656 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 45504 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 45504 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 588432 0x1098F4: new_bst (bst.c:13)
+  n1: 588432 0x1098F4: append_bst (bst.c:101)
+   n1: 588432 0x109D0A: random_bst (bst.c:244)
+    n1: 588432 0x10A747: run_test (runner.c:73)
+     n0: 588432 0x1092B5: main (runner.c:105)
+ n1: 587544 0x109934: new_bst (bst.c:13)
+  n1: 587544 0x109934: append_bst (bst.c:103)
+   n1: 587544 0x109D0A: random_bst (bst.c:244)
+    n1: 587544 0x10A747: run_test (runner.c:73)
+     n0: 587544 0x1092B5: main (runner.c:105)
+ n1: 393216 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 393216 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 389592 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 192984 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 94680 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 45528 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 45528 in 2 places, all below massif's threshold (1.00%)
+    n0: 3624 in 1 place, below massif's threshold (1.00%)
+ n1: 392000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 392000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 392000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 392000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 392000 0x10A75A: run_test (runner.c:76)
+      n0: 392000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=835333335
+mem_heap_B=2804512
+mem_heap_extra_B=1600072
+mem_stacks_B=0
+heap_tree=peak
+n6: 2804512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 786408 0x10A044: new_avl_tree (avl_tree.c:30)
+  n3: 786408 0x10A044: doublev_to_avl_tree_aux (avl_tree.c:99)
+   n3: 393192 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n3: 393192 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+    n3: 196584 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n3: 196584 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+     n3: 98280 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n3: 98280 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n1: 49128 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n1: 49128 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n0: 49128 in 3 places, all below massif's threshold (1.00%)
+      n0: 24 in 1 place, below massif's threshold (1.00%)
+     n0: 24 in 1 place, below massif's threshold (1.00%)
+    n0: 24 in 1 place, below massif's threshold (1.00%)
+   n0: 24 in 1 place, below massif's threshold (1.00%)
+ n1: 602688 0x1098F4: new_bst (bst.c:13)
+  n1: 602688 0x1098F4: append_bst (bst.c:101)
+   n1: 602688 0x109D0A: random_bst (bst.c:244)
+    n1: 602688 0x10A747: run_test (runner.c:73)
+     n0: 602688 0x1092B5: main (runner.c:105)
+ n1: 597288 0x109934: new_bst (bst.c:13)
+  n1: 597288 0x109934: append_bst (bst.c:103)
+   n1: 597288 0x109D0A: random_bst (bst.c:244)
+    n1: 597288 0x10A747: run_test (runner.c:73)
+     n0: 597288 0x1092B5: main (runner.c:105)
+ n1: 413592 0x10A0B9: new_avl_tree (avl_tree.c:30)
+  n1: 413592 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:95)
+   n2: 413592 0x10A0B9: doublev_to_avl_tree_aux (avl_tree.c:88)
+    n2: 393216 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+     n2: 196608 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+     n2: 196608 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+      n2: 98304 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+      n2: 98304 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+       n1: 49152 0x10A070: doublev_to_avl_tree_aux (avl_tree.c:100)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+       n1: 49152 0x10A083: doublev_to_avl_tree_aux (avl_tree.c:101)
+        n0: 49152 in 2 places, all below massif's threshold (1.00%)
+    n0: 20376 in 1 place, below massif's threshold (1.00%)
+ n1: 400000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 400000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n1: 400000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 400000 0x10A14F: bst_to_avl_tree (avl_tree.c:64)
+     n1: 400000 0x10A75A: run_test (runner.c:76)
+      n0: 400000 0x1092B5: main (runner.c:105)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4536 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=862044174
+mem_heap_B=106256
+mem_heap_extra_B=67880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=879851154
+mem_heap_B=543240
+mem_heap_extra_B=306016
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=906561584
+mem_heap_B=686736
+mem_heap_extra_B=385688
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=924368978
+mem_heap_B=350312
+mem_heap_extra_B=230584
+mem_stacks_B=0
+heap_tree=detailed
+n3: 350312 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 173328 0x109934: new_bst (bst.c:13)
+  n1: 173328 0x109934: append_bst (bst.c:103)
+   n2: 173328 0x109D0A: random_bst (bst.c:244)
+    n1: 173328 0x10A647: run_test_it (runner.c:42)
+     n0: 173328 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 172464 0x1098F4: new_bst (bst.c:13)
+  n1: 172464 0x1098F4: append_bst (bst.c:101)
+   n2: 172464 0x109D0A: random_bst (bst.c:244)
+    n1: 172464 0x10A647: run_test_it (runner.c:42)
+     n0: 172464 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4520 in 19 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=951079743
+mem_heap_B=599240
+mem_heap_extra_B=305992
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=977790410
+mem_heap_B=563320
+mem_heap_extra_B=304064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=995597398
+mem_heap_B=920744
+mem_heap_extra_B=504280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1022307883
+mem_heap_B=411368
+mem_heap_extra_B=271288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1040115129
+mem_heap_B=461840
+mem_heap_extra_B=304936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1066825551
+mem_heap_B=1137896
+mem_heap_extra_B=755896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1102439746
+mem_heap_B=1048136
+mem_heap_extra_B=557304
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1048136 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 312744 0x1098F4: new_bst (bst.c:13)
+  n1: 312744 0x1098F4: append_bst (bst.c:101)
+   n2: 312744 0x109D0A: random_bst (bst.c:244)
+    n1: 312744 0x10A647: run_test_it (runner.c:42)
+     n0: 312744 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 311232 0x109934: new_bst (bst.c:13)
+  n1: 311232 0x109934: append_bst (bst.c:103)
+   n2: 311232 0x109D0A: random_bst (bst.c:244)
+    n1: 311232 0x10A647: run_test_it (runner.c:42)
+     n0: 311232 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 208000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 208000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n2: 208000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 208000 0x10A1B9: bst_to_avl_tree_it (avl_tree.c:122)
+     n1: 208000 0x10A65A: run_test_it (runner.c:45)
+      n0: 208000 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 133176 0x10A2A3: new_empty_avl_tree (avl_tree.c:12)
+  n1: 133176 0x10A2A3: bst_to_avl_tree_it (avl_tree.c:144)
+   n1: 133176 0x10A65A: run_test_it (runner.c:45)
+    n0: 133176 0x1092C1: main (runner.c:106)
+ n1: 78264 0x10A360: new_empty_avl_tree (avl_tree.c:12)
+  n1: 78264 0x10A360: bst_to_avl_tree_it (avl_tree.c:140)
+   n1: 78264 0x10A65A: run_test_it (runner.c:45)
+    n0: 78264 0x1092C1: main (runner.c:106)
+ n0: 4720 in 16 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=1129150382
+mem_heap_B=51512
+mem_heap_extra_B=31512
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1155861330
+mem_heap_B=281648
+mem_heap_extra_B=184808
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1182572165
+mem_heap_B=495896
+mem_heap_extra_B=327640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1209283096
+mem_heap_B=656120
+mem_heap_extra_B=434456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1244897282
+mem_heap_B=1341224
+mem_heap_extra_B=891464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1257595333
+mem_heap_B=617504
+mem_heap_extra_B=408712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1270293014
+mem_heap_B=1438784
+mem_heap_extra_B=956504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1282990835
+mem_heap_B=607280
+mem_heap_extra_B=401896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1295688546
+mem_heap_B=1839312
+mem_heap_extra_B=1042120
+mem_stacks_B=0
+heap_tree=detailed
+n6: 1839312 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 408792 0x1098F4: new_bst (bst.c:13)
+  n1: 408792 0x1098F4: append_bst (bst.c:101)
+   n2: 408792 0x109D0A: random_bst (bst.c:244)
+    n1: 408792 0x10A647: run_test_it (runner.c:42)
+     n0: 408792 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 407184 0x109934: new_bst (bst.c:13)
+  n1: 407184 0x109934: append_bst (bst.c:103)
+   n2: 407184 0x109D0A: random_bst (bst.c:244)
+    n1: 407184 0x10A647: run_test_it (runner.c:42)
+     n0: 407184 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 386856 0x10A2A3: new_empty_avl_tree (avl_tree.c:12)
+  n1: 386856 0x10A2A3: bst_to_avl_tree_it (avl_tree.c:144)
+   n1: 386856 0x10A65A: run_test_it (runner.c:45)
+    n0: 386856 0x1092C1: main (runner.c:106)
+ n1: 359760 0x10A360: new_empty_avl_tree (avl_tree.c:12)
+  n1: 359760 0x10A360: bst_to_avl_tree_it (avl_tree.c:140)
+   n1: 359760 0x10A65A: run_test_it (runner.c:45)
+    n0: 359760 0x1092C1: main (runner.c:106)
+ n1: 272000 0x1096A9: append_doublev (doublev.c:121)
+  n2: 272000 0x109C4C: bst_to_doublev_aux (bst.c:225)
+   n2: 272000 0x109C87: bst_to_doublev (bst.c:206)
+    n1: 272000 0x10A1B9: bst_to_avl_tree_it (avl_tree.c:122)
+     n1: 272000 0x10A65A: run_test_it (runner.c:45)
+      n0: 272000 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4720 in 16 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=1308386475
+mem_heap_B=561728
+mem_heap_extra_B=371528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1321084176
+mem_heap_B=1734392
+mem_heap_extra_B=966888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1333781979
+mem_heap_B=466784
+mem_heap_extra_B=308232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1346479678
+mem_heap_B=1514776
+mem_heap_extra_B=815064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1359177414
+mem_heap_B=322664
+mem_heap_extra_B=212152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1371875143
+mem_heap_B=1219656
+mem_heap_extra_B=612824
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1384573002
+mem_heap_B=125840
+mem_heap_extra_B=80936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1397270738
+mem_heap_B=854552
+mem_heap_extra_B=566744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1409968415
+mem_heap_B=1321400
+mem_heap_extra_B=878264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1422666171
+mem_heap_B=610040
+mem_heap_extra_B=403736
+mem_stacks_B=0
+heap_tree=detailed
+n3: 610040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 305400 0x109934: new_bst (bst.c:13)
+  n1: 305400 0x109934: append_bst (bst.c:103)
+   n2: 305400 0x109D0A: random_bst (bst.c:244)
+    n1: 305400 0x10A647: run_test_it (runner.c:42)
+     n0: 305400 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 300120 0x1098F4: new_bst (bst.c:13)
+  n1: 300120 0x1098F4: append_bst (bst.c:101)
+   n2: 300120 0x109D0A: random_bst (bst.c:244)
+    n1: 300120 0x10A647: run_test_it (runner.c:42)
+     n0: 300120 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4520 in 19 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=1435363846
+mem_heap_B=1711592
+mem_heap_extra_B=930368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1448061541
+mem_heap_B=314984
+mem_heap_extra_B=207032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1460759271
+mem_heap_B=1098112
+mem_heap_extra_B=640048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=1473456951
+mem_heap_B=496304
+mem_heap_extra_B=328168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1486154806
+mem_heap_B=694832
+mem_heap_extra_B=460264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1498852487
+mem_heap_B=1833312
+mem_heap_extra_B=1000568
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1511550500
+mem_heap_B=317312
+mem_heap_extra_B=208584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1524248226
+mem_heap_B=1081464
+mem_heap_extra_B=672064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1536945914
+mem_heap_B=1200680
+mem_heap_extra_B=797784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1549643823
+mem_heap_B=612344
+mem_heap_extra_B=405272
+mem_stacks_B=0
+heap_tree=detailed
+n3: 612344 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 305784 0x1098F4: new_bst (bst.c:13)
+  n1: 305784 0x1098F4: append_bst (bst.c:101)
+   n2: 305784 0x109D0A: random_bst (bst.c:244)
+    n1: 305784 0x10A647: run_test_it (runner.c:42)
+     n0: 305784 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 302040 0x109934: new_bst (bst.c:13)
+  n1: 302040 0x109934: append_bst (bst.c:103)
+   n2: 302040 0x109D0A: random_bst (bst.c:244)
+    n1: 302040 0x10A647: run_test_it (runner.c:42)
+     n0: 302040 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4520 in 19 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=1562341507
+mem_heap_B=1598280
+mem_heap_extra_B=833360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1575039412
+mem_heap_B=114920
+mem_heap_extra_B=73656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=1587737212
+mem_heap_B=837656
+mem_heap_extra_B=555480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=1600434899
+mem_heap_B=2047688
+mem_heap_extra_B=1127712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=1613132922
+mem_heap_B=320696
+mem_heap_extra_B=210840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=1625830988
+mem_heap_B=1039160
+mem_heap_extra_B=689816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=1638528668
+mem_heap_B=2440192
+mem_heap_extra_B=1384160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=1651226525
+mem_heap_B=488888
+mem_heap_extra_B=322968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=1663924228
+mem_heap_B=1302800
+mem_heap_extra_B=736056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=1676621911
+mem_heap_B=1425992
+mem_heap_extra_B=947992
+mem_stacks_B=0
+heap_tree=detailed
+n5: 1425992 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 710784 0x10A2A3: new_empty_avl_tree (avl_tree.c:12)
+  n1: 710784 0x10A2A3: bst_to_avl_tree_it (avl_tree.c:144)
+   n1: 710784 0x10A65A: run_test_it (runner.c:45)
+    n0: 710784 0x1092C1: main (runner.c:106)
+ n1: 393192 0x10A360: new_empty_avl_tree (avl_tree.c:12)
+  n1: 393192 0x10A360: bst_to_avl_tree_it (avl_tree.c:140)
+   n1: 393192 0x10A65A: run_test_it (runner.c:45)
+    n0: 393192 0x1092C1: main (runner.c:106)
+ n1: 159480 0x109934: new_bst (bst.c:13)
+  n1: 159480 0x109934: append_bst (bst.c:103)
+   n2: 159480 0x109D0A: random_bst (bst.c:244)
+    n1: 159480 0x10A647: run_test_it (runner.c:42)
+     n0: 159480 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 157992 0x1098F4: new_bst (bst.c:13)
+  n1: 157992 0x1098F4: append_bst (bst.c:101)
+   n2: 157992 0x109D0A: random_bst (bst.c:244)
+    n1: 157992 0x10A647: run_test_it (runner.c:42)
+     n0: 157992 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4544 in 17 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=84
+#-----------
+time=1689319830
+mem_heap_B=598784
+mem_heap_extra_B=396232
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=1702017506
+mem_heap_B=1482976
+mem_heap_extra_B=752056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=1714715197
+mem_heap_B=903848
+mem_heap_extra_B=599880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=1727412874
+mem_heap_B=654296
+mem_heap_extra_B=433240
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=1740110582
+mem_heap_B=1575136
+mem_heap_extra_B=791224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=1752808260
+mem_heap_B=784160
+mem_heap_extra_B=520072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=1765505961
+mem_heap_B=659576
+mem_heap_extra_B=436760
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=1778203646
+mem_heap_B=1546488
+mem_heap_extra_B=784064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=1790901341
+mem_heap_B=1235528
+mem_heap_extra_B=821016
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=1803599305
+mem_heap_B=637088
+mem_heap_extra_B=421768
+mem_stacks_B=0
+heap_tree=detailed
+n3: 637088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 317616 0x1098F4: new_bst (bst.c:13)
+  n1: 317616 0x1098F4: append_bst (bst.c:101)
+   n2: 317616 0x109D0A: random_bst (bst.c:244)
+    n1: 317616 0x10A647: run_test_it (runner.c:42)
+     n0: 317616 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 314952 0x109934: new_bst (bst.c:13)
+  n1: 314952 0x109934: append_bst (bst.c:103)
+   n2: 314952 0x109D0A: random_bst (bst.c:244)
+    n1: 314952 0x10A647: run_test_it (runner.c:42)
+     n0: 314952 0x1092C1: main (runner.c:106)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 4520 in 19 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=94
+#-----------
+time=1816297039
+mem_heap_B=1513408
+mem_heap_extra_B=800056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=1828994717
+mem_heap_B=1700048
+mem_heap_extra_B=1130728
+mem_stacks_B=0
+heap_tree=empty

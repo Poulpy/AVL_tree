@@ -4,7 +4,7 @@ FLAGS=-W -O2 -g -std=c99
 CC=gcc
 INC=-Isrc
 
-.PHONY: tests benchmark plots check run_fat_benchmark run_local_benchmark plots dummy_plots
+.PHONY: tests benchmark plots check run_fat_benchmark run_local_benchmark plots dummy_plots massif_analysis
 
 all: tests benchmark
 
@@ -36,6 +36,9 @@ run_fat_benchmark:
 run_local_benchmark:
 	sudo cpupower -c 3 frequency-set --governor performance
 	taskset -c 3 ./bin/runner 1000 50000 100
+
+massif_analysis:
+	valgrind --tool=massif ./bin/runner 1000 50000 1000
 
 plots:
 	gnuplot -c create_plots_bw.gp > data/plots/plots_$(shell date +%d_%H_%M_%S).png
