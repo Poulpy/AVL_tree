@@ -213,7 +213,7 @@ bool is_balanced(struct avl_tree *root) {
     balance_factor = height_avl_tree(root->left) - height_avl_tree(root->right);
 
     if (balance_factor == 1 || balance_factor == 0 || balance_factor == -1) {
-        return is_balanced(root->left) || is_balanced(root->right);
+        return is_balanced(root->left) && is_balanced(root->right);
     } else {
         return false;
     }
