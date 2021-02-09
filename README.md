@@ -13,10 +13,7 @@ make tests
 
 To run the tests :
 ```
-./bin/test_doublev
-./bin/test_bst
-./bin/test_stack
-./bin/test_avl_tree
+make check
 ```
 
 # Run benchmark and draw plots

@@ -29,10 +29,10 @@ tests:
 
 benchmark:
 	$(CC) $(FLAGS) $(INC) src/doublev.c src/bst.c src/iia.c src/stack.c src/avl_tree.c src/runner.c -o $(BIN_DIR)/runner
-	./bin/runner
+	./bin/runner 10000 50000 1000
 
 plots:
-	gnuplot -c create_plots_bw.gp > data/plots/plots.png
+	gnuplot -c create_plots_bw.gp > data/plots/plots_$(shell date +%d_%H_%M_%S).png
 
 check: tests
 	./$(BIN_DIR)/test_doublev
