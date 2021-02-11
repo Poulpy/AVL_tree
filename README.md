@@ -21,9 +21,19 @@ make check
 ```
 # make sure your os is quiesced for better results
 make benchmark
-# plot is under data/plots
+
 # csv files are under data/csv
+make run_local_benchmark
+
+# plot is under data/plots
+make plots
 ```
+
+# Run Massif analysis
+```
+make massif_analysis
+```
+
 
 # Want to contribute ?
 
@@ -31,6 +41,7 @@ make benchmark
 find * -name *.[ch] -type f | xargs grep -n TODO
 ```
 
-# Notes
+# TODO
 
-` gnuplot -c create_plots_bw.gp > data/plots/plots.png`
+- avl_tree: insert, delete operations
+- sum_types/inheritance for tree/bst/avl_tree
